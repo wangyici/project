@@ -1,7 +1,7 @@
 //飲食
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:project/addDietRecord_page.dart';
+import 'package:project/diet.dart';
 import 'package:project/main.dart';
 
 class Diet {
@@ -19,6 +19,127 @@ class Diet {
   ];
 }
 
+// class _DietState extends State<Diet> {
+//   String year = DateTime.now().year.toString();
+//   String month = DateTime.now().month.toString();
+//   String day = DateTime.now().day.toString();
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//         appBar: AppBar(
+//           leading: Builder(
+//             builder: ((context) {
+//               return IconButton(
+//                 icon: Icon(Icons.chevron_left),
+//                 color: Color.fromARGB(255, 88, 88, 88),
+//                 iconSize: 20,
+//                 onPressed: () {},
+//               );
+//             }),
+//           ),
+//           elevation: 0,
+//           title: Text(
+//             '飲食紀錄',
+//             style: TextStyle(
+//                 fontSize: 18,
+//                 color: Color.fromARGB(255, 88, 88, 88),
+//                 fontWeight: FontWeight.bold),
+//           ),
+//           backgroundColor: Color.fromARGB(255, 217, 250, 216),
+//           centerTitle: true,
+//         ),
+//         body: Center(
+//           child: Column(
+//             children: [
+//               Expanded(
+//                 child: AnimatedList(
+//                     initialItemCount: Diet().dietRecordList.length,
+//                     itemBuilder: (context, index, animation) {
+//                       final _dietRecordList = Diet().dietRecordList[index];
+//                       return Card(
+//                         child: ListTile(
+//                           leading: Column(
+//                             mainAxisAlignment: MainAxisAlignment.center,
+//                             children: <Widget>[
+//                               Text(
+//                                 Diet().dietRecordList[index].month +
+//                                     "/" +
+//                                     Diet().dietRecordList[index].day,
+//                                 style: TextStyle(fontSize: 15),
+//                               )
+//                             ],
+//                           ),
+//                           title: Text(
+//                             Diet().dietRecordList[index].hour +
+//                                 ":" +
+//                                 Diet().dietRecordList[index].minute,
+//                             style: TextStyle(fontSize: 15),
+//                           ),
+//                           trailing: IconButton(
+//                             icon: Icon(Icons.chevron_right),
+//                             color: Color.fromARGB(255, 205, 205, 205),
+//                             onPressed: () {
+//                               Navigator.push(
+//                                   context,
+//                                   MaterialPageRoute(
+//                                       builder: (context) => DietRecordPage(
+//                                             month: Diet()
+//                                                 .dietRecordList[index]
+//                                                 .month,
+//                                             day: Diet()
+//                                                 .dietRecordList[index]
+//                                                 .day,
+//                                             hour: Diet()
+//                                                 .dietRecordList[index]
+//                                                 .hour,
+//                                             minute: Diet()
+//                                                 .dietRecordList[index]
+//                                                 .minute,
+//                                             imagePath: Diet()
+//                                                 .dietRecordList[index]
+//                                                 .imagePath,
+//                                           )));
+//                             },
+//                           ),
+//                         ),
+//                       );
+//                     }),
+//               ),
+//               Container(
+//                 width: double.maxFinite,
+//                 height: 70,
+//                 child: Row(
+//                   mainAxisAlignment: MainAxisAlignment.center,
+//                   children: [
+//                     ElevatedButton.icon(
+//                       style: ElevatedButton.styleFrom(
+//                           primary: Color.fromARGB(255, 217, 250, 216)),
+//                       onPressed: () {
+//                         Navigator.push(
+//                             context,
+//                             MaterialPageRoute(
+//                                 builder: (context) => AddDietRecordPage()));
+//                       },
+//                       icon: Icon(
+//                         Icons.photo_camera,
+//                         color: Color.fromARGB(255, 88, 88, 88),
+//                         size: 20,
+//                       ),
+//                       label: Text(
+//                         '拍攝及備註',
+//                         style: TextStyle(
+//                             color: Color.fromARGB(255, 88, 88, 88),
+//                             fontSize: 15),
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ));
+//   }
+// }
 
 class DietRecord {
   String month = DateTime.now().month.toString();
